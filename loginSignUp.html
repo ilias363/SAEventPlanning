@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Login and Sign Up</title>
+  <link rel="stylesheet" href="./output.css">
+</head>
+
+<body class="flex items-center justify-center min-h-screen bg-gray-100" style="background-color: #D6D1C4;">
+  <div
+    class="flex flex-col items-center md:items-stretch justify-center md:flex-row space-y-8 md:space-y-0 md:space-x-40 p-10 md:p-1 w-full md:w-3/4">
+
+    <!-- Login Panel -->
+    <div class="w-full max-w-lg p-10 bg-opacity-90 rounded-lg shadow-lg min-w-[300px]"
+      style="background-color: #415464;">
+      <h2 class="font-montserat text-center text-3xl font-bold text-white mb-10">Se connecter</h2>
+      <form class="space-y-10">
+        <div>
+          <label for="username" class="font-montserat sr-only">Nom d'utilisateur ou Email</label>
+          <input type="text" id="username" placeholder="Nom d'utilisateur ou Email"
+            class="font-montserat w-full px-4 py-3 text-sm md:text-lg text-gray-800 bg-gray-100 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-600">
+        </div>
+        <div>
+          <label for="password" class="font-montserat sr-only">Password</label>
+          <input type="password" id="password" placeholder="Password"
+            class="font-montserat w-full px-4 py-3 text-sm md:text-lg text-gray-800 bg-gray-100 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-600">
+        </div>
+        <div class="flex items-center justify-between text-lg text-gray-200 flex-col md:flex-row">
+          <div class="flex items-center mb-2 md:mb-0">
+            <input type="checkbox" id="remember-me" class="mr-2 text-blue-600 focus:ring-blue-600">
+            <label for="remember-me" class="font-montserat">Remember me</label>
+          </div>
+          <a href="#" class="font-montserat hover:underline">Forget password?</a>
+        </div>
+        <button type="submit"
+          class="font-montserat w-full px-5 py-3 font-semibold text-lg text-white  rounded-full hover:bg-yellow-700 focus:outline-none focus:ring-2 focus:ring-yellow-600"
+          style="background-color: #BD9A5F;">Login</button>
+      </form>
+    </div>
+
+    <div
+      class=" md:flex md:flex-col md:items-center md:justify-center w-full max-w-lg py-14 px-4 md:px-14 bg-opacity-90 rounded-lg shadow-lg min-w-[300px]"
+      style="background-color: #415464;">
+      <h2 class="font-montserat text-center text-3xl font-bold text-white mb-8">Créer un compte</h2>
+      <p class="font-montserat text-center text-lg text-gray-200 mb-6">vous n’avez pas un compte</p>
+      <button style="background-color: #BD9A5F;"
+        class="font-montserat w-full px-5 py-3 font-semibold text-lg text-white rounded-full hover:bg-yellow-700 focus:outline-none focus:ring-2 focus:ring-yellow-600">
+        Sign Up
+      </button>
+
+    </div>
+
+
+
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Booking Form</title>
+  <link rel="stylesheet" href="./output.css">
+</head>
+
+<body>
+  <header class="sticky top-0 left-0 w-full z-50 bg-[#D6D1C4]">
+    <div class="flex items-center justify-between mx-1 md:mx-2">
+      <div class="flex justify-start">
+        <!-- Navbar for desktop (visible on medium screens and larger) -->
+        <nav class="hidden md:flex space-x-4">
+          <a href="#" class="px-4 py-2 font-montserat hover:bg-gray-200 rounded">Edit Profile</a>
+          <a href="./loginSignUp.html" class="px-4 py-2 font-montserat hover:bg-gray-200 rounded">Login</a>
+          <a href="#" class="px-4 py-2 font-montserat hover:bg-gray-200 rounded">Logout</a>
+          <a href="./contact.html" class="px-4 py-2 font-montserat hover:bg-gray-200 rounded">Contactez nous</a>
+        </nav>
+
+        <!-- Dropdown menu for mobile (visible only on mobile screens below medium) -->
+        <div class="block md:hidden relative">
+          <button id="dropdownDefaultButton" type="button" onclick="toggleDropdown()" class="px-3 py-2.5">
+            <img src="./assets/menu.png" alt="Menu" class="w-[26] h-[32px]" />
+          </button>
+          <div id="dropdown"
+            class="z-10 hidden absolute bg-white dark:bg-gray-700 divide-y divide-gray-100 rounded-lg shadow w-44">
+            <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefaultButton">
+              <li><a href="#"
+                  class="block px-4 py-2 active:bg-gray-100 dark:active:bg-gray-600 dark:active:text-white">Edit
+                  Profile</a></li>
+              <li><a href="./loginSignUp.html"
+                  class="block px-4 py-2 active:bg-gray-100 dark:active:bg-gray-600 dark:active:text-white">Login</a>
+              </li>
+              <li><a href="#"
+                  class="block px-4 py-2 active:bg-gray-100 dark:active:bg-gray-600 dark:active:text-white">Logout</a>
+              </li>
+              <li><a href="./contact.html"
+                  class="block px-4 py-2 active:bg-gray-100 dark:active:bg-gray-600 dark:active:text-white">Contactez
+                  nous</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="flex justify-center md:mr-[20%]">
+        <img src="./assets/logoSA.png" class="w-[70px] h-[70px] md:w-[90px] md:h-[90px] object-cover">
+      </div>
+      <div class="flex justify-end">
+        <img src="./assets/profile_photo.jpg"
+          class="w-[45px] h-[45px] md:w-[60px] md:h-[60px] rounded-full object-cover">
+      </div>
+    </div>
+    <nav
+      class="flex items-center justify-start md:justify-around bg-[#152737] py-2 md:py-4 text-white font-montserat md:text-xl font-medium overflow-x-auto whitespace-nowrap">
+      <a href="./index.html" class="active:text-[#c2c2c2] md:hover:text-[#c2c2c2] px-4">Accueil</a>
+      <a href="./events.html" class="active:text-[#c2c2c2] md:hover:text-[#c2c2c2] px-4">Découvrir nos événements</a>
+      <a href="./prendreRendezVous.html" class="active:text-[#c2c2c2] md:hover:text-[#c2c2c2] px-4">Prendre un
+        Rendez-vous</a>
+    </nav>
+    <script>
+      function toggleDropdown() {
+        const dropdown = document.getElementById("dropdown");
+        dropdown.classList.toggle("hidden");
+      }
+    </script>
+  </header>
+  <main class=" py-2 md:p-10 flex items-center justify-center min-h-screen bg-[#D6D1C4]">
+
+
+    <div class="bg-white p-4 md:p-8 rounded-lg shadow-lg max-w-xl md:max-w-5xl w-full mx-4 min-h-[600px]">
+      <h2 class="font-montserat text-3xl font-bold text-center mb-6">Réserver un Rendez-vous</h2>
+
+
+      <form class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+
+        <div class="space-y-6">
+
+          <div>
+            <label class="font-montserat block text-lg font-medium text-gray-700" for="nom">Nom</label>
+            <input type="text" id="nom" placeholder="Nom"
+              class="font-montserat mt-2 block w-full p-3 border bg-gray-100 border-gray-300 rounded-md text-lg focus:outline-none focus:border-gray-500">
+          </div>
+
+
+          <div>
+            <label class="font-montserat block text-lg font-medium text-gray-700" for="prenom">Prénom</label>
+            <input type="text" id="prenom" placeholder="Prénom"
+              class="font-montserat mt-2 block w-full p-3 border bg-gray-100 border-gray-300 rounded-md text-lg focus:outline-none focus:border-gray-500">
+          </div>
+
+
+          <div>
+            <label class="font-montserat block text-lg font-medium text-gray-700" for="email">Email</label>
+            <input type="email" id="email" placeholder="Adresse Mail"
+              class="font-montserat mt-2 block w-full p-3 border bg-gray-100 border-gray-300 rounded-md text-lg focus:outline-none focus:border-gray-500">
+          </div>
+
+
+          <div>
+            <label class="font-montserat block text-lg font-medium text-gray-700" for="telephone">Téléphone</label>
+            <input type="tel" id="telephone" placeholder="Téléphone"
+              class="font-montserat mt-2 block w-full p-3 border bg-gray-100 border-gray-300 rounded-md text-lg focus:outline-none focus:border-gray-500">
+          </div>
+        </div>
+
+
+        <div class="space-y-6">
+
+          <div>
+            <label class="font-montserat block text-lg font-medium  text-gray-700" for="eventType">Type
+              d'événement</label>
+            <select id="eventType"
+              class="font-montserat mt-2 block w-full p-3 bg-gray-100 border border-gray-300 rounded-md text-lg focus:outline-none focus:border-gray-500">
+              <option>Choisir...</option>
+              <option>Mariage</option>
+              <option>Anniversaire</option>
+              <option>Réunion</option>
+            </select>
+          </div>
+
+
+          <div>
+            <label class="font-montserat block text-lg font-medium text-gray-700" for="date">Date souhaitée</label>
+            <input type="date" id="date"
+              class="font-montserat mt-2 block w-full p-3 border border-gray-300 rounded-md text-lg bg-gray-100 focus:outline-none focus:border-gray-500">
+          </div>
+
+
+          <div>
+            <label class="font-montserat block text-lg font-medium text-gray-700" for="message">Message</label>
+            <textarea id="message" placeholder="Message" rows="5"
+              class="font-montserat mt-2 block w-full p-3 border border-gray-300 rounded-md text-lg bg-gray-100 focus:outline-none focus:border-gray-500"></textarea>
+          </div>
+        </div>
+
+
+        <div class="md:col-span-2 text-center">
+          <button type="submit"
+            class="font-montserat inline-flex items-center justify-center hover:bg-yellow-700 text-black font-bold p-2 md:p-4 text-lg md:text-xl bg-gray-100 rounded-2xl focus:outline-none focus:ring-2 focus:ring-yellow-500"
+            style="background-color: #BD9A5F;">
+            Réservez maintenant
+          </button>
+
+
+        </div>
+
+      </form>
+    </div>
+  </main>
+  <footer>
+    <div class="hidden md:flex bg-white items-center justify-between p-2">
+      <div class="flex flex-col items-center">
+        <img src="./assets/logoSA.png" class="w-[110px] h-[110px] object-cover">
+        <span class="font-medium">Copyright © 2024 SA - Event Planning. All Rights Reserved.</span>
+      </div>
+      <div class="flex items-center justify-between">
+        <div class="bg-black w-1 h-32 mr-4"></div>
+        <div class="flex flex-col items-start justify-between h-28">
+          <span><span class="font-bold">Téléphone:</span> +212612345678</span>
+          <span><span class="font-bold">E-mail:</span> contact-sa@gmail.com</span>
+          <span><span class="font-bold">Adresse:</span> 50 Avenue Nile Sidi Othman، Casablanca 20670</span>
+        </div>
+      </div>
+      <div class="flex items-center justify-between mr-10">
+        <img src="./assets/facebook.png"
+          class="w-[40px] h-[40px] opacity-100 hover:opacity-80 cursor-pointer object-cover">
+        <img src="./assets/instagram.png"
+          class="w-[40px] h-[40px] mx-3 opacity-100 hover:opacity-80 cursor-pointer object-coverr">
+        <img src="./assets/twitter.png"
+          class="w-[40px] h-[40px] opacity-100 hover:opacity-80 cursor-pointer object-cover">
+      </div>
+    </div>
+    <div class="flex md:hidden bg-white items-center justify-between px-2.5">
+      <div class="flex flex-col items-start justify-between">
+        <span class="text-xs"><span class="underline font-montserat">Téléphone:</span> +212612345678</span>
+        <span class="text-xs"><span class="underline font-montserat">E-mail:</span> contact-sa@gmail.com</span>
+        <span class="text-xs"><span class="underline font-montserat">Adresse:</span> 50 Avenue Nile Sidi Othman،
+          Casablanca 20670</span>
+      </div>
+      <div class="flex flex-col items-center justify-between mb-2 mr-4">
+        <div class="flex">
+          <img src="./assets/logoSA.png" class="w-[80px] h-[80px] object-cover">
+        </div>
+        <div class="flex items-center justify-between">
+          <img src="./assets/facebook.png" class="w-[23px] h-[23x] opacity-100 active:opacity-75 object-cover">
+          <img src="./assets/instagram.png" class="w-[23px] h-[23x] mx-2 opacity-100 active:opacity-75 object-coverr">
+          <img src="./assets/twitter.png" class="w-[23px] h-[23x] opacity-100 active:opacity-75 object-cover">
+        </div>
+      </div>
+    </div>
+    <span class="font-montserat block md:hidden text-xs text-center text-white bg-[#373535] py-2">Copyright © 2024
+      SA -
+      Event Planning. All Rights Reserved.</span>
+  </footer>
+</body>
+
+</html>
